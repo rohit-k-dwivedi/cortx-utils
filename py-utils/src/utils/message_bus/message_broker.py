@@ -54,7 +54,7 @@ class MessageBrokerFactory:
             "Invalid service name %s.", broker_type)
 
     @staticmethod
-    def get_server_list(cluster_conf_index: str) -> tuple:
+    def get_server_list(cluster_conf_index: str, cluster_conf: str) -> tuple:
         """Fetches info of nodes in cluster from passed template file.
 
         Args:
