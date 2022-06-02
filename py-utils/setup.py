@@ -160,3 +160,4 @@ setup(name='cortx-py-utils',
       zip_safe=False,
       python_requires='>=3.6',
       install_requires=get_install_requirements())
+      
