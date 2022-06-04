@@ -103,7 +103,8 @@ class ConfStore:
 
         self._cache[index].dump()
 
-    def get(self, index: str, key: str, default_val: str = None, **filters):
+    def get(self, index: str, key: str, default_val: str = None,
+            force: bool = False, **filters):
         """
         Obtain value for the given configuration
 
@@ -124,7 +125,8 @@ class ConfStore:
         if key is None:
             raise ConfError(errno.EINVAL, "can't able to find config key "
                                                "%s in loaded config", key)
-        val = self._cache[index].get(key, **filters)
+        # import pdb;pdb.set_trace()
+        val = self._cache[index].get(key,force=force, **filters)
         return default_val if val is None else val
 
     def set(self, index: str, key: str, val):
