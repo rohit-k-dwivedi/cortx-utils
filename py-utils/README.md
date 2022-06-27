@@ -30,7 +30,7 @@ sudo yum install -y gcc rpm-build python3 python3-pip python3-devel python3-setu
 ```
 
 ## Clone
-```
+```bash
 git clone --recursive https://github.com/Seagate/cortx-utils -b main
 ```
 
@@ -79,7 +79,6 @@ yum remove cortx-py-utils
 ```
 
 ## Update new dependency package
-
 - Add package in `python_requirements.txt`.
 
 <hr>
